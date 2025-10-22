@@ -91,7 +91,7 @@
 
 body {
   color: var(--text-main);
-  font-family: Ariel, Helvetica, sans-serif;
+  font-family: Inter, Helvetica, sans-serif;
 }
 
 .dark {

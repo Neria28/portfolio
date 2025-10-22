@@ -1,7 +1,7 @@
 export const Footer = ({ className }: { className?: string }) => {
   return (
     <footer className={className}>
-      <p>
+      <p className="text-xs">
         Made by{" "}
         {/* <a
           href={process.env.NEXT_PUBLIC_GITHUB_URL + "/portfolio"}

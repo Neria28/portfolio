@@ -31,7 +31,7 @@ export interface RotatingTextProps
     React.ComponentPropsWithoutRef<typeof motion.span>,
     "children" | "transition" | "initial" | "animate" | "exit"
   > {
-  staticText?: string;
+  staticText?: React.ReactElement;
   texts: string[];
   transition?: Transition;
   initial?: TargetAndTransition;

@@ -1,7 +1,10 @@
 "use client";
 
+import { buttonVariants } from "@/components/ui/shadcn-io/button";
 import RotatingText from "@/components/ui/shadcn-io/rotating-text";
 import TypingText from "@/components/ui/shadcn-io/typing-text";
+import { Handshake } from "lucide-react";
+import Link from "next/link";
 
 const Home = () => {
   return (
@@ -21,7 +24,18 @@ const Home = () => {
         <div>
           <span className="text-xl lg:text-2xl">
             <RotatingText
-              staticText="I'm a Frontend developer and also a call-to guy for"
+              staticText={
+                <>
+                  I&apos;m a{" "}
+                  <span
+                    className="font-bold"
+                    style={{ color: "var(--primary-color)" }}
+                  >
+                    Frontend developer
+                  </span>{" "}
+                  and also a call-to guy for
+                </>
+              }
               texts={[
                 "pixel-perfect imperfection",
                 "unavoidable lame jokes",
@@ -45,16 +59,21 @@ const Home = () => {
 
         <div>
           <p>
-            Previously worked as{" "}
-            <span className="font-bold text-(--primary-color)">
-              Frontend developer{" "}
-            </span>
-            at Radware LTD., mainly focused on developing solutions using React
-            and NodeJS frameworks.
+            Previously worked at Makor Capital LTD. and Radware LTD., mainly
+            focused on developing solutions using React and NodeJS frameworks.
           </p>
         </div>
         <div>
           <p>Looking forward for my next adventure</p>
+        </div>
+        <div>
+          <Link
+            href="/links"
+            className={buttonVariants({ variant: "default" })}
+          >
+            Let&apos;s talk
+            <Handshake className="size-4" />
+          </Link>
         </div>
       </div>
     </div>

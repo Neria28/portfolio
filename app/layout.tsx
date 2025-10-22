@@ -32,7 +32,7 @@ export default function RootLayout({
                 </div>
               </main>
             </div>
-            <Footer className="sticky bottom-0 z-50 hidden h-5 w-full items-center justify-end px-4 py-6 opacity-50 lg:flex" />
+            <Footer className="sticky bottom-0 z-50 hidden h-5 w-full items-center justify-end px-4 py-5 opacity-50 lg:flex" />
           </div>
         </div>
       </body>
