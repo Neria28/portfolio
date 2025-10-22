@@ -4,7 +4,7 @@ import Icon from "../icons/icon";
 
 export const Links = () => {
   return (
-    <div className="flex h-full flex-col items-center gap-6 md:justify-center">
+    <div className="flex h-full flex-col items-center gap-6 justify-center">
       <Avatar
         className="size-35 overflow-hidden rounded-full"
         src="/me.jpg"
