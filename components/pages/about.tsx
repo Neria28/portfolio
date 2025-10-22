@@ -1,7 +1,7 @@
 "use client";
 export const About = () => {
   return (
-    <div className="flex h-full flex-col justify-between">
+    <div className="flex h-full flex-col justify-center">
       <div className="w-full">
         <span className="text-xl lg:text-4xl text-(--primary-color)">
           Neria Mordekhay Lister
@@ -23,7 +23,7 @@ export const About = () => {
         <p>
           Today, I&apos;m a{" "}
           <span className="text-(--primary-color)">
-            Full Stack Developer with 5 years
+            Full Stack Developer (frontend oriented) with 5 years
           </span>{" "}
           of experience building web applications end to end. I enjoy connecting
           all the dots - from UI to backend—to create complete, well -
@@ -37,14 +37,13 @@ export const About = () => {
           continuous learning that development offers.
         </p>
       </div>
-      <div className="mb-8 flex flex-col gap-6"></div>
-      <div className="mb-8 flex flex-col gap-4">
+      <div className="mb-8 flex flex-col mt-10 gap-4">
         <h2 className="text-2xl font-bold">Career Experience</h2>
         <div className="flex flex-col">
           <ul className="list-disc space-y-4 px-5">
             <li>
               <span className="font-bold text-(--primary-color)">
-                Radware - Sep 2024 - Oct 2025
+                Radware: Sep 2024 - Oct 2025
               </span>{" "}
               <span className="text-xs text-gray-500">
                 (On-site | Full-time )
@@ -59,7 +58,7 @@ export const About = () => {
             </li>
             <li>
               <span className="font-bold text-(--primary-color)">
-                Makor Capita - Sep 2021 - Sep 2024
+                Makor Capital: Sep 2021 - Sep 2024
               </span>{" "}
               <span className="text-xs text-gray-500">
                 (On-site | Full-time )
