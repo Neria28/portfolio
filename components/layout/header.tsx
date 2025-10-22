@@ -3,7 +3,6 @@ import Link from "next/link";
 import Icon from "../icons/icon";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { Children } from "react";
 
 const links: { href: string; text: string }[] = [
   { href: "/", text: "Home" },
@@ -18,7 +17,7 @@ export const Header = ({ className }: { className?: string }) => {
     <header className={className}>
       <div>
         <Link href="/">
-          <Icon.Logo className="fill-white" />
+          <Icon.Logo />
         </Link>
       </div>
       <nav>
@@ -29,8 +28,7 @@ export const Header = ({ className }: { className?: string }) => {
                 href={link.href}
                 className={cn(
                   "text-white hover:text-(--primary-color) transition-colors",
-                  pathname === link.href &&
-                    "font-bold text-(--primary-color)"
+                  pathname === link.href && "font-bold text-(--primary-color)"
                 )}
               >
                 {link.text}

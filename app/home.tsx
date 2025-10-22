@@ -13,10 +13,10 @@ const Home = () => {
         <div>
           <TypingText
             text={["Hi there, I'm Neria Mordekhay Lister"]}
-            typingSpeed={75}
+            typingSpeed={130}
             pauseDuration={1500}
             showCursor={true}
-            className="text-6xl font-bold text-center max-w-6xl"
+            className="text-[clamp(2rem,5vw,3rem)] font-bold  max-w-6xl"
             cursorClassName="h-12"
             variableSpeed={{ min: 50, max: 120 }}
           />
@@ -44,7 +44,7 @@ const Home = () => {
                 "AI whispering",
                 "debuggable bugs crafting",
               ]}
-              rotatingTextClassName="md:px-2 md:bg-[var(--primary-color)] md:text-black overflow-hidden py-0.5 sm:py-1 md:py-2 inline rounded-lg"
+              rotatingTextClassName="md:px-2 md:bg-(--primary-color) md:text-black overflow-hidden py-0.5 sm:py-1 md:py-2 inline rounded-lg"
               staggerFrom="last"
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
@@ -59,7 +59,7 @@ const Home = () => {
 
         <div>
           <p>
-            Previously worked at Makor Capital LTD. and Radware LTD., mainly
+            Previously worked at Makor Capital LTD and Radware LTD, mainly
             focused on developing solutions using React and NodeJS frameworks.
           </p>
         </div>

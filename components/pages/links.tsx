@@ -14,18 +14,18 @@ export const Links = () => {
         href={process.env.NEXT_PUBLIC_GITHUB_URL}
         icon={<Icon.GitHub className="size-4" />}
         variant="outline"
-        className="w-40"
+        className="w-30"
       >
         GitHub
-      </LinkButton>{" "}
+      </LinkButton>
       <LinkButton
         href={process.env.NEXT_PUBLIC_LINKEDIN_URL}
         icon={<Icon.LinkedIn className="size-4" />}
         variant="outline"
-        className="w-40"
+        className="w-30"
       >
         LinkedIn
-      </LinkButton>{" "}
+      </LinkButton>
     </div>
   );
 };

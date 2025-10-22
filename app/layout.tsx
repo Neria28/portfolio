@@ -11,7 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Neria M. Lister | portfolio",
+  title: "Neria M. Lister | Portfolio",
 };
 
 export default function RootLayout({
