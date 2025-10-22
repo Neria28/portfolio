@@ -1,7 +1,7 @@
 "use client";
 export const About = () => {
   return (
-    <div className="flex h-full flex-col justify-center">
+    <div className="flex flex-col justify-center">
       <div className="w-full">
         <span className="text-xl lg:text-4xl text-(--primary-color)">
           Neria Mordekhay Lister
