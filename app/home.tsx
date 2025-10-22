@@ -44,7 +44,7 @@ const Home = () => {
                 "AI whispering",
                 "debuggable bugs crafting",
               ]}
-              rotatingTextClassName="md:px-2 md:bg-(--primary-color) md:text-black overflow-hidden py-0.5 sm:py-1 md:py-2 inline rounded-lg"
+              rotatingTextClassName="px-2 bg-(--primary-color) text-black overflow-hidden py-0.5 sm:py-1 md:py-2 inline rounded-lg"
               staggerFrom="last"
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
