@@ -31,7 +31,7 @@ const Home = () => {
                     className="font-bold"
                     style={{ color: "var(--primary-color)" }}
                   >
-                    Frontend developer
+                    Fullstack developer
                   </span>{" "}
                   and also a call-to guy for
                 </>
