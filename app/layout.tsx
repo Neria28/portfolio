@@ -27,7 +27,7 @@ export default function RootLayout({
             <div className="flex h-full flex-col items-center lg:pb-10">
               <Header className="sticky top-0 z-50 flex h-20 w-full max-w-screen-2xl items-center justify-between px-8 py-5" />
               <main className="w-full flex-1 overflow-y-auto">
-                <div className="mx-auto h-full max-w-screen-xl px-8 py-5">
+                <div className="mx-auto h-full max-w-7xl px-8 py-5">
                   {children}
                 </div>
               </main>

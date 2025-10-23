@@ -2,7 +2,7 @@
 
 import { buttonVariants } from "@/components/ui/shadcn-io/button";
 import RotatingText from "@/components/ui/shadcn-io/rotating-text";
-import TypingText from "@/components/ui/shadcn-io/typing-text";
+import TextType from "@/components/ui/TextType";
 import { Handshake } from "lucide-react";
 import Link from "next/link";
 
@@ -11,14 +11,14 @@ const Home = () => {
     <div className="flex h-full flex-col justify-center gap-12">
       <div className="flex flex-col gap-6">
         <div>
-          <TypingText
+          <TextType
             text={["Hi there, I'm Neria Mordekhay Lister"]}
-            typingSpeed={130}
-            pauseDuration={1500}
-            showCursor={true}
+            typingSpeed={75}
             className="text-[clamp(2rem,5vw,3rem)] font-bold  max-w-6xl"
+            pauseDuration={1500}
             cursorClassName="h-12"
-            variableSpeed={{ min: 50, max: 120 }}
+            showCursor={true}
+            cursorCharacter="|"
           />
         </div>
         <div>
@@ -37,14 +37,19 @@ const Home = () => {
                 </>
               }
               texts={[
-                "pixel-perfect imperfection",
-                "unavoidable lame jokes",
-                "microservice monoliths",
-                "undocumentable documentation",
-                "AI whispering",
-                "debuggable bugs crafting",
+                "CSS archaeology",
+                "pixel-perfect chaos",
+                "midnight UI polish",
+                "CTO side quests",
+                "DOM adventures",
+                "refactor loops",
+                "bug déjà vu",
+                "team caffeine rituals",
+                "existential PC talks",
+                "design-system therapy",
+                "git time travel",
               ]}
-              rotatingTextClassName="px-2 bg-(--primary-color) text-black overflow-hidden py-0.5 sm:py-1 md:py-2 inline rounded-lg"
+              rotatingTextClassName="md:px-2 md:bg-(--primary-color) md:text-black overflow-hidden py-0.5 sm:py-1 md:py-2 inline rounded-lg"
               staggerFrom="last"
               initial={{ y: "100%" }}
               animate={{ y: 0 }}

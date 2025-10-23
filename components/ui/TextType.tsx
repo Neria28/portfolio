@@ -3,7 +3,7 @@
 import { ElementType, useEffect, useRef, useState, createElement, useMemo, useCallback } from 'react';
 import { gsap } from 'gsap';
 
-interface TypingTextProps {
+interface TextTypeProps {
   className?: string;
   showCursor?: boolean;
   hideCursorWhileTyping?: boolean;
@@ -24,7 +24,7 @@ interface TypingTextProps {
   reverseMode?: boolean;
 }
 
-const TypingText = ({
+const TextType = ({
   text,
   as: Component = 'div',
   typingSpeed = 50,
@@ -44,7 +44,7 @@ const TypingText = ({
   startOnVisible = false,
   reverseMode = false,
   ...props
-}: TypingTextProps & React.HTMLAttributes<HTMLElement>) => {
+}: TextTypeProps & React.HTMLAttributes<HTMLElement>) => {
   const [displayedText, setDisplayedText] = useState('');
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -62,7 +62,7 @@ const TypingText = ({
   }, [variableSpeed, typingSpeed]);
 
   const getCurrentTextColor = () => {
-    if (textColors.length === 0) return 'currentColor';
+    if (textColors.length === 0) return '#ffffff';
     return textColors[currentTextIndex % textColors.length];
   };
 
@@ -163,8 +163,7 @@ const TypingText = ({
     isVisible,
     reverseMode,
     variableSpeed,
-    onSentenceComplete,
-    getRandomSpeed
+    onSentenceComplete
   ]);
 
   const shouldHideCursor =
@@ -183,16 +182,12 @@ const TypingText = ({
     showCursor && (
       <span
         ref={cursorRef}
-        className={`inline-block opacity-100 ${shouldHideCursor ? 'hidden' : ''} ${
-          cursorCharacter === '|' 
-            ? `h-5 w-[1px] translate-y-1 bg-foreground ${cursorClassName}` 
-            : `ml-1 ${cursorClassName}`
-        }`}
+        className={`ml-1 inline-block opacity-100 ${shouldHideCursor ? 'hidden' : ''} ${cursorClassName}`}
       >
-        {cursorCharacter === '|' ? '' : cursorCharacter}
+        {cursorCharacter}
       </span>
     )
   );
 };
 
-export default TypingText;
+export default TextType;
