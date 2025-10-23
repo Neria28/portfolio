@@ -4,6 +4,7 @@ import "./globals.css";
 
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { cn } from "@/utils/cn";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -21,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased`}>
+      <body className={cn(inter.variable)}>
         <div id="root" className="root">
           <div className="absolute inset-0 flex flex-col overflow-hidden">
             <div className="flex h-full flex-col items-center lg:pb-10">
