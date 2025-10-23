@@ -12,7 +12,7 @@ const Home = () => {
       <div className="flex flex-col gap-6">
         <div>
           <TextType
-            text={["Hi there, I'm Neria Lister"]}
+            text={["Hi there, I'm Neria Mordekhay Lister"]}
             typingSpeed={75}
             className="text-[clamp(2rem,5vw,3rem)] font-bold  max-w-6xl"
             pauseDuration={3}
