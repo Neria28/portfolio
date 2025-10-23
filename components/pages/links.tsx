@@ -1,5 +1,6 @@
 import { Avatar } from "@radix-ui/themes";
 import { LinkButton } from "../ui/shadcn-io/button";
+import { File } from "lucide-react";
 import Icon from "../icons/icon";
 
 export const Links = () => {
@@ -10,22 +11,32 @@ export const Links = () => {
         src="/me.jpg"
         fallback="N"
       />
-      <LinkButton
-        href={process.env.NEXT_PUBLIC_GITHUB_URL}
-        icon={<Icon.GitHub className="size-4" />}
-        variant="outline"
-        className="w-30"
-      >
-        GitHub
-      </LinkButton>
-      <LinkButton
-        href={process.env.NEXT_PUBLIC_LINKEDIN_URL}
-        icon={<Icon.LinkedIn className="size-4" />}
-        variant="outline"
-        className="w-30"
-      >
-        LinkedIn
-      </LinkButton>
+      <div className="flex flex-col gap-6 md:flex-row">
+        <LinkButton
+          href={process.env.NEXT_PUBLIC_GITHUB_URL}
+          icon={<Icon.GitHub className="size-4" />}
+          variant="outline"
+          className="w-30"
+        >
+          GitHub
+        </LinkButton>
+        <LinkButton
+          href={process.env.NEXT_PUBLIC_LINKEDIN_URL}
+          icon={<Icon.LinkedIn className="size-4" />}
+          variant="outline"
+          className="w-30"
+        >
+          LinkedIn
+        </LinkButton>
+        <LinkButton
+          href={"/neria_m_lister_cv.pdf"}
+          icon={<File className="size-4" />}
+          variant="outline"
+          className="w-30"
+        >
+          My CV
+        </LinkButton>
+      </div>
     </div>
   );
 };
