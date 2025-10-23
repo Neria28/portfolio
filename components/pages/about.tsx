@@ -1,4 +1,8 @@
 "use client";
+
+import Link from "next/link";
+import { ExternalLink } from "lucide-react";
+import { Button } from "../ui/shadcn-io/button";
 export const About = () => {
   return (
     <div className="flex flex-col justify-center">
@@ -72,6 +76,23 @@ export const About = () => {
             </li>
           </ul>
         </div>
+      </div>
+      <div className="flex justify-end">
+        <span>
+         Sounds good? Then{" "}
+          <Button
+            variant="link"
+            size="icon"
+            className="inline-block w-fit items-center font-bold text-(--primary-color)"
+          >
+            <Link href="/links" className="inline-block">
+              <div className="flex w-full items-center gap-2">
+                let&apos;s talk
+                <ExternalLink className="size-4" />
+              </div>
+            </Link>
+          </Button>
+        </span>
       </div>
     </div>
   );
