@@ -2,7 +2,7 @@
 
 import { buttonVariants } from "@/components/ui/shadcn-io/button";
 import RotatingText from "@/components/ui/shadcn-io/rotating-text";
-import TextType from "@/components/ui/TextType";
+import TextType from "@/components/ui/TextType/TextType";
 import { Handshake } from "lucide-react";
 import Link from "next/link";
 
