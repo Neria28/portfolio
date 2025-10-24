@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { cn } from "@/utils/cn";
 import { ThemeProvider } from "@/components/theme-provider";
 import * as React from "react";
+
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import * as React from "react";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -18,7 +18,7 @@ export const MobileMenu = ({
   const pathname = usePathname();
   const { setTheme, theme } = useTheme();
 
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
   return (
     <nav className="block md:hidden relative">
@@ -30,26 +30,37 @@ export const MobileMenu = ({
       </button>
       {isMobileMenuOpen && (
         <div
-          tabIndex={0}
-          className="absolute right-0.5 backdrop-blur-md backdrop-brightness-150 rounded-lg py-3 px-6 border border-(--primary-light)"
+          className="fixed inset-0 z-50 flex justify-end top-13 right-8"
+          onPointerDown={(e) => {
+            if ((e.target as HTMLElement).dataset.menuBackdrop === "true") {
+              setIsMobileMenuOpen(false);
+            }
+          }}
         >
-          <ul className="flex flex-col gap-4 items-center">
-            {menuList.map((link, index) => (
-              <li key={index}>
-                <Link
-                  href={link.href}
-                  className={cn(
-                    "text-main transition-colors",
-                    pathname === link.href && "font-bold text-(--primary-color)"
-                  )}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-            <ThemeSwitcher value={theme} onChange={setTheme} />
-          </ul>
+          <div
+            data-menu-backdrop="true"
+            className="absolute inset-0"
+          />
+          <div className="absolute right-0.5 backdrop-blur-md backdrop-brightness-250 rounded-lg py-3 px-6 border border-primary">
+            <ul className="flex flex-col gap-4 items-center">
+              {menuList.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    href={link.href}
+                    className={cn(
+                      "text-main transition-colors",
+                      pathname === link.href &&
+                        "font-bold text-primary"
+                    )}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+              <ThemeSwitcher value={theme} onChange={setTheme} />
+            </ul>
+          </div>
         </div>
       )}
     </nav>
