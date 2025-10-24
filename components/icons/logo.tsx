@@ -1,8 +1,7 @@
 import { cn } from "@/lib/utils";
 import BaseIcon from "./base-icons";
 import { IconProps } from "./icon";
-
-// A utility function to normalize whitespace in SVG path strings
+import { useTheme } from "next-themes";
 const normalizeSvgPath = (path: string) =>
   path.replace(/[\r\n\t]+/g, " ").trim();
 
@@ -147,6 +146,7 @@ M736.155945,398.988495
 z`;
 
 export const LogoIcon = (props: IconProps) => {
+  const { resolvedTheme: theme } = useTheme();
   const normalizedPath1 = normalizeSvgPath(path1);
   const normalizedPath2 = normalizeSvgPath(path2);
   const normalizedPath3 = normalizeSvgPath(path3);
@@ -169,7 +169,7 @@ export const LogoIcon = (props: IconProps) => {
         enableBackground="new 180 390 680 260"
       >
         <path
-          fill="#FAFAF4"
+          fill={theme === "dark" ? "#FAFAF4" : "#121b29"}
           opacity="1.000000"
           stroke="none"
           d={normalizedPath1}
@@ -181,7 +181,7 @@ export const LogoIcon = (props: IconProps) => {
           d={normalizedPath2}
         />
         <path
-          fill="#FBFBF5"
+          fill={theme === "dark" ? "#FAFAF4" : "#121b29"}
           opacity="1.000000"
           stroke="none"
           d={normalizedPath3}

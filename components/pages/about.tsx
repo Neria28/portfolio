@@ -3,10 +3,11 @@
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import { Button } from "../ui/shadcn-io/button";
+
 export const About = () => {
   return (
     <div className="flex h-full flex-col lg:justify-center gap-6">
-      <h1 className="mb-4 text-4xl font-bold text-(--primary-color)">
+      <h1 className="mb-4 text-4xl font-bold text-primary">
         Neria Mordekhay Lister
       </h1>
       <div className="flex flex-col gap-6">
@@ -25,7 +26,7 @@ export const About = () => {
           </p>
           <p>
             Today, I&apos;m a{" "}
-            <span className="text-(--primary-color)">
+            <span className="text-primary">
               Full Stack Developer (frontend oriented) with 5 years
             </span>{" "}
             of experience building web applications end to end. I enjoy
@@ -45,7 +46,7 @@ export const About = () => {
           <div className="flex flex-col">
             <ul className="list-disc space-y-4 px-5">
               <li>
-                <span className="font-bold text-(--primary-color)">
+                <span className="font-bold text-primary">
                   &quot;Radware&quot;: Sep 2024 - Oct 2025
                 </span>{" "}
                 <span className="text-xs text-gray-500">
@@ -60,7 +61,7 @@ export const About = () => {
                 </div>
               </li>
               <li>
-                <span className="font-bold text-(--primary-color)">
+                <span className="font-bold text-primary">
                   &quot;Makor Capital&quot;: Sep 2021 - Sep 2024
                 </span>{" "}
                 <span className="text-xs text-gray-500">
@@ -82,7 +83,7 @@ export const About = () => {
             <Button
               variant="link"
               size="icon"
-              className="inline-block w-fit items-center font-bold text-(--primary-color)"
+              className="inline-block w-fit items-center font-bold"
             >
               <Link href="/links" className="inline-block">
                 <div className="flex w-full items-center gap-2">

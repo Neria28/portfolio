@@ -28,8 +28,7 @@ const Home = () => {
                 <>
                   I&apos;m a{" "}
                   <span
-                    className="font-bold"
-                    style={{ color: "var(--primary-color)" }}
+                    className="font-bold text-primary"
                   >
                     Full stack developer
                   </span>{" "}
@@ -49,7 +48,7 @@ const Home = () => {
                 "design-system therapy",
                 "git time travel",
               ]}
-              rotatingTextClassName="md:px-2 md:bg-(--primary-color) md:text-black overflow-hidden py-0.5 sm:py-1 md:py-2 inline rounded-lg"
+              rotatingTextClassName="md:px-2 md:bg-primary md:text-black overflow-hidden py-0.5 sm:py-1 md:py-2 inline rounded-lg"
               staggerFrom="last"
               initial={{ y: "100%" }}
               animate={{ y: 0 }}

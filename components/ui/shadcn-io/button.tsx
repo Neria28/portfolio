@@ -9,10 +9,9 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-primary text-(--primary-color) shadow-xs hover:bg-(--primary-color) hover:text-primary-foreground transition-colors duration-500",
-        outline:
-          "border bg-background shadow-xs hover:border-(--primary-color) hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:border-red-300 dark:hover:bg-input/50",
-        link: "text-primary underline-offset-4 hover:underline",
+          "bg-btn-bg text-btn-text shadow-xs hover:bg-btn-bg-hover hover:text-btn-text-hover transition-colors duration-500",
+        outline: "border shadow-xs hover:border-primary",
+        link: "text-btn-text underline-offset-4 hover:underline",
       },
       size: {
         default: "h-11 px-4 py-3 has-[>svg]:px-3",
