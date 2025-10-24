@@ -7,10 +7,6 @@ import { usePathname } from "next/navigation";
 import { MobileMenu } from "../ui/MobileMenu/MobileMenu";
 import { ThemeSwitcher } from "../ui/shadcn-io/theme-switcher";
 import { useTheme } from "next-themes";
-import {
-  ThemeToggleButton,
-  useThemeTransition,
-} from "../ui/shadcn-io/theme-toggle-button";
 
 const links: { href: string; label: string }[] = [
   { href: "/", label: "Home" },
@@ -21,16 +17,6 @@ const links: { href: string; label: string }[] = [
 export const Header = ({ className }: { className?: string }) => {
   const pathname = usePathname();
   const { setTheme, theme } = useTheme();
-  const [isDark, setIsDark] = useState<boolean>(true);
-  const { startTransition } = useThemeTransition();
-
-  const handleThemeToggle = () => {
-    startTransition(() => {
-      const currentTheme = isDark ? "light" : "dark";
-      setTheme(currentTheme);
-      setIsDark(currentTheme === "dark");
-    });
-  };
 
   return (
     <header className={className}>

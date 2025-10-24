@@ -5,6 +5,8 @@ import { Menu } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { ThemeSwitcher } from "../shadcn-io/theme-switcher";
+import { useTheme } from "next-themes";
 
 interface MobileMenuProps {
   menuList: { href: string; label: string }[];
@@ -14,9 +16,10 @@ export const MobileMenu = ({
   menuList,
 }: MobileMenuProps): React.ReactElement => {
   const pathname = usePathname();
+  const { setTheme, theme } = useTheme();
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  
+
   return (
     <nav className="block md:hidden relative">
       <button
@@ -30,13 +33,13 @@ export const MobileMenu = ({
           tabIndex={0}
           className="absolute right-0.5 backdrop-blur-md backdrop-brightness-150 rounded-lg py-3 px-6 border border-(--primary-light)"
         >
-          <ul className="flex flex-col gap-4">
+          <ul className="flex flex-col gap-4 items-center">
             {menuList.map((link, index) => (
               <li key={index}>
                 <Link
                   href={link.href}
                   className={cn(
-                    "text-white transition-colors",
+                    "text-main transition-colors",
                     pathname === link.href && "font-bold text-(--primary-color)"
                   )}
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -45,6 +48,7 @@ export const MobileMenu = ({
                 </Link>
               </li>
             ))}
+            <ThemeSwitcher value={theme} onChange={setTheme} />
           </ul>
         </div>
       )}
