@@ -33,6 +33,7 @@ export const Links = () => {
           icon={<File className="size-4" />}
           variant="outline"
           className="w-30"
+          download="neria_m_lister_cv.pdf"
         >
           My CV
         </LinkButton>
