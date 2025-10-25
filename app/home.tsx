@@ -32,7 +32,7 @@ const Home = () => {
                   >
                     Full stack developer
                   </span>{" "}
-                  and also a call-to guy for
+                  and also a go to guy for
                 </>
               }
               texts={[
