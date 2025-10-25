@@ -38,6 +38,8 @@
   --color-btn-text: var(--button-text);
   --color-btn-bg-hover: var(--button-bg-hover);
   --color-btn-text-hover: var(--button-text-hover);
+  --color-btn-bg-active : var(--button-bg-active);
+  --color-btn-text-active: var(--button-text-active);
 }
 
 body {
@@ -59,7 +61,8 @@ body {
   --button-bg-hover: oklch(0.38 0.04 250);
   --button-text-hover: oklch(0.82 0.12 183);
 
-  --button-bg-active: oklch(0.15 0.03 260);
+  /* --button-bg-active: oklch(0.35 0.07 250); */
+  --button-bg-active: oklch(0.22 0.05 260);
   --button-text-active: oklch(0.9 0.1 183);
 
   --button-bg-disabled: oklch(0.14 0.01 260);

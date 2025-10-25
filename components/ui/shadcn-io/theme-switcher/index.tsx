@@ -63,7 +63,7 @@ export const ThemeSwitcher = ({
   return (
     <div
       className={mergeClassNames(
-        "relative isolate flex h-8 rounded-full bg-background p-1 ring-1 ring-border",
+        "relative isolate flex h-8 rounded-full p-1 ring-1 ring-border",
         className
       )}
     >
@@ -80,7 +80,7 @@ export const ThemeSwitcher = ({
           >
             {isActive && (
               <motion.div
-                className="absolute inset-0 rounded-full bg-secondary"
+                className="absolute inset-0 rounded-full bg-btn-bg-active"
                 layoutId="activeTheme"
                 transition={{ type: "spring", duration: 0.5 }}
               />
@@ -88,7 +88,7 @@ export const ThemeSwitcher = ({
             <Icon
               className={mergeClassNames(
                 "relative z-10 m-auto h-4 w-4",
-                isActive ? "text-foreground" : "text-muted-foreground"
+                isActive ? "text-btn-text-active" : "text-muted-foreground"
               )}
             />
           </button>
