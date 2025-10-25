@@ -13,7 +13,7 @@ export const Links = () => {
         </AvatarFallback>
       </Avatar>
       <div>
-        <p className="text-primary text-3xl">My Links</p>
+        <p className="text-primary text-3xl font-bold">My Links</p>
       </div>
       <div className="flex flex-col gap-6 md:flex-row">
         <LinkButton
