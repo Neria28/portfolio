@@ -4,7 +4,7 @@ import * as React from "react";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { cn } from "@/lib/utils";
+import { mergeClassNames } from "@/lib/utils";
 import { ThemeSwitcher } from "../shadcn-io/theme-switcher";
 import { useTheme } from "next-themes";
 
@@ -47,7 +47,7 @@ export const MobileMenu = ({
                 <li key={index}>
                   <Link
                     href={link.href}
-                    className={cn(
+                    className={mergeClassNames(
                       "text-main transition-colors",
                       pathname === link.href &&
                         "font-bold text-primary"

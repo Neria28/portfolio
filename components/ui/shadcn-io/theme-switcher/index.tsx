@@ -4,7 +4,7 @@ import { useControllableState } from "@radix-ui/react-use-controllable-state";
 import { Monitor, Moon, Sun } from "lucide-react";
 import { motion } from "motion/react";
 import { useCallback, useEffect, useState } from "react";
-import { cn } from "@/lib/utils";
+import { mergeClassNames } from "@/lib/utils";
 
 const themes = [
   {
@@ -62,7 +62,7 @@ export const ThemeSwitcher = ({
 
   return (
     <div
-      className={cn(
+      className={mergeClassNames(
         "relative isolate flex h-8 rounded-full bg-background p-1 ring-1 ring-border",
         className
       )}
@@ -86,7 +86,7 @@ export const ThemeSwitcher = ({
               />
             )}
             <Icon
-              className={cn(
+              className={mergeClassNames(
                 "relative z-10 m-auto h-4 w-4",
                 isActive ? "text-foreground" : "text-muted-foreground"
               )}

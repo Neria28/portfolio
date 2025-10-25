@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { mergeClassNames } from "@/lib/utils";
 import BaseIcon from "./base-icons";
 import { IconProps } from "./icon";
 import { useTheme } from "next-themes";
@@ -156,7 +156,7 @@ export const LogoIcon = (props: IconProps) => {
       {...props}
       viewBox="0 0 450 450"
       preserveAspectRatio="xMidYMid meet"
-      className={cn("size-20", props.className)}
+      className={mergeClassNames("size-20", props.className)}
     >
       <svg
         version="1.1"

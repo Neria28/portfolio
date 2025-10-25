@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Icon from "../icons/icon";
-import { cn } from "@/lib/utils";
+import { mergeClassNames } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import { MobileMenu } from "../ui/MobileMenu/MobileMenu";
 import { ThemeSwitcher } from "../ui/shadcn-io/theme-switcher";
@@ -35,7 +35,7 @@ export const Header = ({ className }: { className?: string }) => {
             <div key={index} className="h-fit">
               <Link
                 href={link.href}
-                className={cn(
+                className={mergeClassNames(
                   "text-main hover:text-primary transition-colors block text-center",
                   pathname === link.href && "font-bold text-primary"
                 )}

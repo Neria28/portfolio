@@ -1,16 +1,20 @@
-import { Avatar } from "@radix-ui/themes";
 import { LinkButton } from "../ui/shadcn-io/button";
 import { File } from "lucide-react";
 import Icon from "../icons/icon";
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 
 export const Links = () => {
   return (
     <div className="flex h-full flex-col items-center gap-6 justify-center">
-      <Avatar
-        className="size-35 overflow-hidden rounded-full"
-        src="/me.jpg"
-        fallback="N"
-      />
+      <Avatar className="size-35">
+        <AvatarImage src={"/me.jpg"} />
+        <AvatarFallback className="">
+          NML
+        </AvatarFallback>
+      </Avatar>
+      <div>
+        <p className="text-primary text-3xl">My Links</p>
+      </div>
       <div className="flex flex-col gap-6 md:flex-row">
         <LinkButton
           href={process.env.NEXT_PUBLIC_GITHUB_URL}
