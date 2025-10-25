@@ -1,3 +1,4 @@
+import * as React from "react";
 import { mergeClassNames } from "@/lib/utils";
 import BaseIcon from "./base-icons";
 import { IconProps } from "./icon";
@@ -146,11 +147,20 @@ M736.155945,398.988495
 z`;
 
 export const LogoIcon = (props: IconProps) => {
+  const [mounted, setMounted] = React.useState(false);
+
   const { resolvedTheme: theme } = useTheme();
   const normalizedPath1 = normalizeSvgPath(path1);
   const normalizedPath2 = normalizeSvgPath(path2);
   const normalizedPath3 = normalizeSvgPath(path3);
 
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
   return (
     <BaseIcon
       {...props}

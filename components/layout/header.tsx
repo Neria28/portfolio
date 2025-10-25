@@ -26,11 +26,7 @@ export const Header = ({ className }: { className?: string }) => {
       </div>
       <nav className="hidden md:block">
         <div className="flex gap-6 items-center">
-          <ThemeSwitcher
-            value={theme}
-            onChange={setTheme}
-            className="scale-85"
-          />
+          <ThemeSwitcher value={theme} onChange={setTheme} />
           {links.map((link, index) => (
             <div key={index} className="h-fit">
               <Link

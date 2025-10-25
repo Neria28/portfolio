@@ -2,8 +2,8 @@
 
 import { Moon, Sun } from 'lucide-react';
 import { useCallback } from 'react';
-import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
+import { mergeClassNames } from '@/lib/utils';
+import { Button } from '../button';
 
 type AnimationVariant = 
   | 'circle' 
@@ -186,7 +186,7 @@ export const ThemeToggleButton = ({
       variant="outline"
       size={showLabel ? 'default' : 'icon'}
       onClick={handleClick}
-      className={cn(
+      className={mergeClassNames(
         'relative overflow-hidden transition-all',
         showLabel && 'gap-2',
         className
