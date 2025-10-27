@@ -28,7 +28,7 @@ export const Header = ({ className }: { className?: string }) => {
         <div className="flex gap-6 items-center">
           <ThemeSwitcher value={theme} onChange={setTheme} />
           {links.map((link, index) => (
-            <div key={index} className="h-fit">
+            <div key={`${index}-${link}`} className="h-fit">
               <Link
                 href={link.href}
                 className={mergeClassNames(
