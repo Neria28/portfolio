@@ -3,13 +3,14 @@ export const Footer = ({ className }: { className?: string }) => {
     <footer className={className}>
       <p className="text-xs">
         Made by{" "}
-        {/* <a
+        <a
           href={process.env.NEXT_PUBLIC_GITHUB_URL + "/portfolio"}
           target="_blank"
           rel="noopener noreferrer"
           className="underline"
-        > */}
-        Neria M. Lister {/* </a> */}
+        >
+          Neria M. Lister
+        </a>
       </p>
     </footer>
   );
