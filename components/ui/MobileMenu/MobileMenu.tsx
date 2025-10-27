@@ -37,20 +37,16 @@ export const MobileMenu = ({
             }
           }}
         >
-          <div
-            data-menu-backdrop="true"
-            className="absolute inset-0"
-          />
+          <div data-menu-backdrop="true" className="absolute inset-0" />
           <div className="absolute right-0.5 backdrop-blur-md backdrop-brightness-250 rounded-lg py-3 px-6 border border-primary">
             <ul className="flex flex-col gap-4 items-center">
               {menuList.map((link, index) => (
-                <li key={index}>
+                <li key={`${index}-${link}`}>
                   <Link
                     href={link.href}
                     className={mergeClassNames(
                       "text-main transition-colors",
-                      pathname === link.href &&
-                        "font-bold text-primary"
+                      pathname === link.href && "font-bold text-primary"
                     )}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
