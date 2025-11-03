@@ -50,7 +50,7 @@ export const About = () => {
                   &quot;Radware&quot;: Sep 2024 - Oct 2025
                 </span>{" "}
                 <span className="text-xs text-gray-500">
-                  (On-site | Full-time )
+                  ( On-site | Full-time )
                 </span>
                 <div className="flex flex-col gap-2">
                   <p>
@@ -65,7 +65,7 @@ export const About = () => {
                   &quot;Makor Capital&quot;: Sep 2021 - Sep 2024
                 </span>{" "}
                 <span className="text-xs text-gray-500">
-                  (On-site | Full-time )
+                  ( On-site | Full-time )
                 </span>
                 <div className="flex flex-col gap-2">
                   <p>
