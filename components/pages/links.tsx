@@ -9,6 +9,7 @@ export const Links = () => {
       <Avatar
         className="size-35 overflow-hidden rounded-full"
         src="/me.jpg"
+        alt="neria_m_image"
         fallback={
           <div className="bg-gray-400 flex size-full items-center justify-center rounded-full">
             NML
