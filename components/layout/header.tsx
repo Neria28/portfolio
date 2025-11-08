@@ -20,7 +20,7 @@ export const Header = ({ className }: { className?: string }) => {
   return (
     <header className={className}>
       <div>
-        <Link href="/home">
+        <Link href="/">
           <Icon.Logo />
         </Link>
       </div>
