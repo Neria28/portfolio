@@ -69,7 +69,7 @@ export const About = () => {
                 </span>
                 <div className="flex flex-col gap-2">
                   <p>
-                    React | NodeJS | MySQL Server | Redis | AWS (S3) | RabbitMQ
+                    React | NodeJS | MySQL Server | Redis | AWS (S3, EC2) | RabbitMQ
                     | GitHub | Jenkins
                   </p>
                 </div>
