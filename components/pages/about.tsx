@@ -49,10 +49,10 @@ export const About = () => {
               {experience.map((job) => (
                 <li key={`${job.company}-${job.period.start}`}>
                   <span className="font-bold text-primary">
-                    {` "${job.company}": ${job.period.start} ${
-                      job.period.end ? -job.period.end : ""
+                    {`"${job.company}": ${job.period.start}${
+                      job.period.end ? ` - ${job.period.end} ` : " "
                     }`}
-                  </span>{" "}
+                  </span>
                   <span className="text-xs text-gray-500">
                     ( {job.workType} | {job.employmentType} )
                   </span>
