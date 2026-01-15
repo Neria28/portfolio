@@ -1,0 +1,61 @@
+[
+  {
+    "company": "Guardio",
+    "period": {
+      "start": "2025-01"
+    },
+    "workType": "On-site",
+    "employmentType": "Full-time",
+    "technologies": [
+      "NextJs",
+      "React TS",
+      "Feature Flag",
+      "MySQL",
+      "GCP",
+      "GitHub",
+      "Docker",
+      "Kubernetes",
+      "MixPanel"
+    ]
+  },
+  {
+    "company": "Radware",
+    "period": {
+      "start": "2024-09",
+      "end": "2025-10"
+    },
+    "workType": "On-site",
+    "employmentType": "Full-time",
+    "technologies": [
+      "React",
+      "NodeJS",
+      "MongoDB",
+      "GCP",
+      "Kafka",
+      "BitBucket",
+      "Docker",
+      "Kubernetes",
+      "Micro-frontend (React + NX Module Federation)",
+      "Micro services architecture"
+    ]
+  },
+  {
+    "company": "Makor Capital",
+    "period": {
+      "start": "2021-09",
+      "end": "2024-09"
+    },
+    "workType": "On-site",
+    "employmentType": "Full-time",
+    "technologies": [
+      "React",
+      "NodeJS",
+      "MySQL Server",
+      "Redis",
+      "AWS (S3, EC2)",
+      "RabbitMQ",
+      "GitHub",
+      "Jenkins"
+    ]
+  }
+]

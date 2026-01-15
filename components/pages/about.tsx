@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import { Button } from "../ui/shadcn-io/button";
+import experience from "../../lib/careerExperience.json";
 
 export const About = () => {
   return (
@@ -45,35 +46,21 @@ export const About = () => {
           <h2 className="text-2xl font-bold">Career Experience</h2>
           <div className="flex flex-col">
             <ul className="list-disc space-y-4 px-5">
-              <li>
-                <span className="font-bold text-primary">
-                  &quot;Radware&quot;: Sep 2024 - Oct 2025
-                </span>{" "}
-                <span className="text-xs text-gray-500">
-                  ( On-site | Full-time )
-                </span>
-                <div className="flex flex-col gap-2">
-                  <p>
-                    React | NodeJS | MongoDB | GCP | Kafka | BitBucket | Docker
-                    | Kubernetes | Micro-frontend (React + NX Module Federation)
-                    | Micro services architecture
-                  </p>
-                </div>
-              </li>
-              <li>
-                <span className="font-bold text-primary">
-                  &quot;Makor Capital&quot;: Sep 2021 - Sep 2024
-                </span>{" "}
-                <span className="text-xs text-gray-500">
-                  ( On-site | Full-time )
-                </span>
-                <div className="flex flex-col gap-2">
-                  <p>
-                    React | NodeJS | MySQL Server | Redis | AWS (S3, EC2) | RabbitMQ
-                    | GitHub | Jenkins
-                  </p>
-                </div>
-              </li>
+              {experience.map((job) => (
+                <li key={`${job.company}-${job.period.start}`}>
+                  <span className="font-bold text-primary">
+                    {` "${job.company}": ${job.period.start} ${
+                      job.period.end ? -job.period.end : ""
+                    }`}
+                  </span>{" "}
+                  <span className="text-xs text-gray-500">
+                    ( {job.workType} | {job.employmentType} )
+                  </span>
+                  <div className="flex flex-col gap-2">
+                    <p>{job.technologies.join(" | ")}</p>
+                  </div>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
